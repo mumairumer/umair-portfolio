@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Umair | Senior .NET Software Engineer</title>
+<meta name="description" content="Muhammad Umair — Senior .NET Software Engineer in Karachi with 16+ years of experience building APIs, payment and shipping integrations, and enterprise web applications.">
+<meta name="theme-color" content="#050f20">
+<meta property="og:title" content="Muhammad Umair | Senior .NET Software Engineer">
+<meta property="og:description" content="16+ years building APIs, payment and shipping integrations, and enterprise web applications with .NET.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050f20'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='%2338bdf8'%3EMU%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050f20;
+  --bg-2:#081a35;
+  --panel:#0c2447;
+  --line:rgba(148,181,224,.16);
+  --text:#eaf1fb;
+  --muted:#9db2cc;
+  --accent:#38bdf8;
+  --accent-2:#f5b942;
+  --green:#14a800;
+  --radius:16px;
+  --maxw:1120px;
+  --head:"Sora","Segoe UI",system-ui,sans-serif;
+  --body:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:100px 0}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.01em}
+.sec-head{text-align:center;margin-bottom:56px}
+.sec-head h2{font-size:clamp(30px,4vw,42px);margin-bottom:14px}
+.sec-head h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:16px auto 0}
+.sec-head p{color:var(--muted);max-width:58ch;margin:0 auto}
+
+/* Header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(5,15,32,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--head);font-weight:700}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2563eb);color:#fff;display:grid;place-items:center;font-size:15px;font-weight:800}
+.brand small{display:block;font-family:var(--body);font-weight:400;font-size:12px;color:var(--muted);margin-top:-2px}
+nav ul{list-style:none;display:flex;gap:4px}
+nav a{display:block;padding:8px 14px;border-radius:8px;color:var(--muted);font-size:15px;font-weight:500;transition:color .2s,background .2s}
+nav a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+nav a.active{color:var(--accent)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);width:42px;height:42px;border-radius:10px;font-size:20px;cursor:pointer}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid transparent;transition:transform .15s,background .2s,border-color .2s,box-shadow .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;fill:currentColor;flex:none}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#2f8ff0);color:#04132a;box-shadow:0 10px 30px rgba(56,189,248,.28)}
+.btn.primary:hover{box-shadow:0 14px 36px rgba(56,189,248,.42)}
+.btn.ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn.upwork{background:var(--green);color:#fff;box-shadow:0 10px 30px rgba(20,168,0,.25)}
+.btn.upwork:hover{background:#1bbd06}
+
+/* Hero (centered) */
+.hero{position:relative;padding:140px 0 90px;text-align:center;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.hero::before{width:520px;height:520px;background:rgba(56,189,248,.20);top:-140px;left:-120px}
+.hero::after{width:460px;height:460px;background:rgba(245,185,66,.12);bottom:-120px;right:-100px}
+.hero .wrap{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.avatar{position:relative;width:224px;height:224px;margin-bottom:30px}
+.avatar .ring{position:absolute;inset:-8px;border-radius:50%;background:conic-gradient(from 0deg,var(--accent),var(--accent-2),#2563eb,var(--accent));animation:spin 8s linear infinite}
+.avatar .ring::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--bg)}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--bg);z-index:2}
+.avatar .badge{position:absolute;z-index:3;right:-2px;bottom:10px;background:var(--bg-2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:7px;box-shadow:0 8px 22px rgba(0,0,0,.4)}
+.badge i{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.2)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hello{color:var(--accent-2);font-weight:600;margin-bottom:10px}
+.hero h1{font-size:clamp(42px,7vw,76px);font-weight:800;margin-bottom:14px;background:linear-gradient(180deg,#fff,#b9d4f3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-family:var(--head);font-size:clamp(18px,2.6vw,26px);font-weight:600;color:var(--accent);min-height:1.5em;margin-bottom:20px}
+.role .caret{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:4px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.about-line{color:var(--muted);max-width:62ch;margin-bottom:32px;font-size:17px}
+.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:56px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;width:100%;max-width:900px}
+.stat{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:24px 12px;backdrop-filter:blur(6px)}
+.stat b{display:block;font-family:var(--head);font-size:clamp(30px,4vw,42px);font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:14px}
+.socials{display:flex;gap:12px;margin-top:34px}
+.socials a{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);transition:color .2s,border-color .2s,transform .15s}
+.socials a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.socials svg{width:20px;height:20px;fill:currentColor}
+
+/* About */
+.about{background:var(--bg-2)}
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start}
+.about-text p{color:var(--muted);margin-bottom:18px}
+.about-text p:first-child{color:var(--text);font-size:18px}
+.facts{display:grid;gap:14px}
+.fact{display:flex;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;transition:border-color .2s}
+.fact:hover{border-color:rgba(56,189,248,.5)}
+.fact .ic{width:42px;height:42px;border-radius:12px;background:rgba(56,189,248,.12);display:grid;place-items:center;flex:none}
+.fact svg{width:20px;height:20px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fact small{display:block;font-size:13px;color:var(--muted)}
+.fact p{font-weight:500;word-break:break-word}
+
+/* Skills */
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill-card{background:linear-gradient(170deg,var(--bg-2),rgba(8,26,53,.5));border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:border-color .2s,transform .2s}
+.skill-card:hover{border-color:rgba(56,189,248,.5);transform:translateY(-3px)}
+.skill-card .ic{width:44px;height:44px;border-radius:12px;background:rgba(56,189,248,.12);display:grid;place-items:center;margin-bottom:16px;font-family:var(--head);font-weight:700;color:var(--accent);font-size:15px}
+.skill-card h3{font-size:18px;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13.5px;padding:6px 12px;border-radius:999px;background:rgba(56,189,248,.09);border:1px solid rgba(56,189,248,.22);color:#cfe9fb}
+
+/* Experience */
+.exp{background:var(--bg-2)}
+.timeline{position:relative;max-width:860px;margin:0 auto;border-left:2px solid var(--line);padding-left:0}
+.job{position:relative;padding:0 0 28px 38px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-9px;top:28px;width:16px;height:16px;border-radius:50%;background:var(--bg-2);border:3px solid var(--accent)}
+.job.current::before{background:var(--accent-2);border-color:var(--accent-2);box-shadow:0 0 0 6px rgba(245,185,66,.18)}
+.job .inner{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;transition:border-color .2s}
+.job .inner:hover{border-color:rgba(56,189,248,.45)}
+.job time{font-size:13.5px;color:var(--accent-2);font-weight:600}
+.job h3{font-size:21px;margin:4px 0 2px}
+.job .co{color:var(--muted);margin-bottom:14px}
+.job .co a{color:var(--accent)}
+.job .co a:hover{text-decoration:underline}
+.job ul{list-style:none;display:grid;gap:8px}
+.job li{position:relative;padding-left:20px;color:#c4d3e6}
+.job li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+
+/* Projects */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.proj{position:relative;background:linear-gradient(170deg,var(--bg-2),rgba(8,26,53,.5));border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s;overflow:hidden}
+.proj::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));opacity:.0;transition:opacity .2s}
+.proj:hover{border-color:rgba(56,189,248,.5);transform:translateY(-4px)}
+.proj:hover::before{opacity:1}
+.proj .meta{font-size:13px;color:var(--accent-2);font-weight:600;margin-bottom:8px}
+.proj h3{font-size:21px;margin-bottom:10px}
+.proj p{color:var(--muted);font-size:15px;margin-bottom:18px;flex:1}
+.proj .chips{margin-bottom:18px}
+.proj .link{color:var(--accent);font-weight:600;font-size:14.5px}
+.proj .link:hover{text-decoration:underline}
+.proj .private{color:var(--muted);font-size:14px}
+
+/* Education */
+.edu{background:var(--bg-2)}
+.edu-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.card h3{font-size:19px;margin-bottom:18px}
+.item{padding:14px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:0;padding-top:0}
+.item b{display:block;font-weight:600}
+.item span{color:var(--muted);font-size:14.5px}
+.lang{display:grid;grid-template-columns:80px 1fr 130px;align-items:center;gap:14px;padding:9px 0}
+.bar{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.bar i{height:6px;border-radius:3px;background:rgba(255,255,255,.1)}
+.bar i.on{background:linear-gradient(90deg,var(--accent),#2f8ff0)}
+.lang em{font-style:normal;font-size:13px;color:var(--muted);text-align:right}
+
+/* Contact */
+.contact-box{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--panel),#0b2f5e);border:1px solid var(--line);border-radius:26px;padding:60px;display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center}
+.contact-box::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(56,189,248,.16);filter:blur(80px);top:-120px;right:-80px}
+.contact-box>*{position:relative}
+.contact-box h2{font-size:clamp(28px,3.6vw,38px);margin-bottom:12px}
+.contact-box p{color:var(--muted)}
+.contact-links{display:grid;gap:12px}
+.contact-links a{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:rgba(5,15,32,.45);transition:border-color .2s,transform .15s;word-break:break-word}
+.contact-links a:hover{border-color:var(--accent);transform:translateX(3px)}
+.contact-links svg{width:20px;height:20px;flex:none;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.contact-links svg.fill{fill:var(--green);stroke:none}
+
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2f8ff0);color:#04132a;display:grid;place-items:center;font-weight:800;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.to-top.show{opacity:1;pointer-events:auto}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .avatar .ring{animation:none}
+  .role .caret{animation:none}
+  .btn,.proj,.skill-card{transition:none}
+}
+
+/* Responsive */
+@media (max-width:960px){
+  .about-grid,.edu-grid,.contact-box{grid-template-columns:1fr}
+  .skill-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .contact-box{padding:38px 26px}
+}
+@media (max-width:720px){
+  section{padding:72px 0}
+  .menu-btn{display:block}
+  nav ul{position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 24px 18px;display:none}
+  nav ul.open{display:flex}
+  .skill-grid,.proj-grid{grid-template-columns:1fr}
+  .hero{padding-top:116px}
+  .avatar{width:190px;height:190px}
+  .lang{grid-template-columns:70px 1fr;}
+  .lang em{grid-column:1/-1;text-align:left;margin-top:-6px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="Muhammad Umair, home">
+      <span class="mark">MU</span>
+      <span>Muhammad Umair<small>Senior .NET Software Engineer</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <nav aria-label="Main">
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="avatar">
+      <span class="ring"></span>
+      <img src="assets/umair.jpg" alt="Portrait of Muhammad Umair" width="944" height="944">
+      <span class="badge"><i></i>Open to work</span>
+    </div>
+    <p class="hello">Hello, I’m</p>
+    <h1>Muhammad Umair</h1>
+    <div class="role" aria-live="polite"><span id="typed">Senior .NET Software Engineer</span><span class="caret"></span></div>
+    <p class="about-line">I build APIs, payment and shipping integrations, and enterprise web applications with .NET. Over 16 years of shipping software that’s scalable, fast, and built to last.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View my projects</a>
+      <a class="btn upwork" href="https://www.upwork.com/freelancers/~017f4734b102be4c19?mp_source=share" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><text x="12" y="16" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="11">Up</text></svg>
+        Hire me on Upwork
+      </a>
+      <a class="btn ghost" href="assets/Muhammad-Umair-Resume.pdf" download>Download resume</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>16+</b><span>Years of experience</span></div>
+      <div class="stat"><b>50+</b><span>Projects delivered</span></div>
+      <div class="stat"><b>10+</b><span>Companies served</span></div>
+      <div class="stat"><b>40+</b><span>Clients</span></div>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/mumairumer" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+      <a href="mailto:mumairumer22@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 12.3 19.5 7.1V7L12 12.2z"/></svg></a>
+      <a href="https://www.upwork.com/freelancers/~017f4734b102be4c19?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><text x="12" y="16" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="11">Up</text></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>About me</h2><p>Backend-focused engineer based in Karachi, Pakistan.</p></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I specialise in .NET technologies, with deep experience in API development, POS systems, customer information systems (CIS), and banking and financial software.</p>
+        <p>At eToolmarts I build the web APIs that connect sellers to marketplaces like Amazon, eBay, and Walmart, wire up payment gateways, and integrate shipping carriers. Earlier in my career I delivered an ERP financial module, a farmer portal for a major fertilizer company, and an online learning platform for the Australian General Practice Training Program.</p>
+        <p>I care about clean architecture, performance, and taking a project from requirements all the way to deployment.</p>
+      </div>
+      <div class="facts reveal">
+        <div class="fact"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Location</small><p>Karachi, Pakistan</p></div></div>
+        <div class="fact"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>Email</small><p><a href="mailto:mumairumer22@gmail.com">mumairumer22@gmail.com</a></p></div></div>
+        <div class="fact"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><small>Phone</small><p><a href="tel:+923422669824">0342-2669824</a></p></div></div>
+        <div class="fact"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5a3 3 0 0 0-.8-2.3c2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.5 4.5 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.5 4.5 0 0 0-.1 3.3A4.8 4.8 0 0 0 4 9.7c0 4.8 3 5.9 5.8 6.2a3 3 0 0 0-.8 2.3V21"/></svg></span><div><small>GitHub</small><p><a href="https://github.com/mumairumer" target="_blank" rel="noopener">github.com/mumairumer</a></p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Skills</h2><p>The tools I use every day to design, build, and ship software.</p></div>
+    <div class="skill-grid">
+      <div class="skill-card reveal"><div class="ic">.NET</div><h3>Backend &amp; full-stack</h3><div class="chips">
+        <span class="chip">C#</span><span class="chip">.NET Framework</span><span class="chip">.NET Core</span><span class="chip">ASP.NET MVC</span><span class="chip">Razor / Blazor</span><span class="chip">Web API</span><span class="chip">Entity Framework</span><span class="chip">LINQ</span><span class="chip">WCF</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Crystal Reports</span><span class="chip">REST API development &amp; integration</span>
+      </div></div>
+      <div class="skill-card reveal"><div class="ic">UI</div><h3>Frontend</h3><div class="chips">
+        <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Bootstrap</span><span class="chip">JavaScript</span><span class="chip">jQuery</span><span class="chip">React.js</span><span class="chip">Angular</span>
+      </div></div>
+      <div class="skill-card reveal"><div class="ic">API</div><h3>E-commerce &amp; marketplaces</h3><div class="chips">
+        <span class="chip">Amazon SP-API</span><span class="chip">eBay API</span><span class="chip">Walmart API</span><span class="chip">ShipStation API</span><span class="chip">Odoo</span><span class="chip">Magento</span>
+      </div></div>
+      <div class="skill-card reveal"><div class="ic">$</div><h3>Payment gateways</h3><div class="chips">
+        <span class="chip">Authorize.Net</span><span class="chip">PayPal</span><span class="chip">Google Pay</span><span class="chip">Braintree</span><span class="chip">Amazon Pay</span><span class="chip">BlueSnap</span>
+      </div></div>
+      <div class="skill-card reveal"><div class="ic">Ship</div><h3>Shipping &amp; logistics</h3><div class="chips">
+        <span class="chip">FedEx</span><span class="chip">USPS</span><span class="chip">UPS</span><span class="chip">Shipment creation</span><span class="chip">Tracking</span><span class="chip">Order synchronization</span><span class="chip">Webhooks</span>
+      </div></div>
+      <div class="skill-card reveal"><div class="ic">Ops</div><h3>Servers, deployment &amp; DevOps</h3><div class="chips">
+        <span class="chip">IIS &amp; Windows Server</span><span class="chip">DigitalOcean Droplets</span><span class="chip">Liquid Web Hosting</span><span class="chip">App deployment &amp; configuration</span><span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">TFS</span><span class="chip">Vault</span><span class="chip">Source control &amp; DevOps workflows</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="exp" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Professional experience</h2><p>Recent roles across e-commerce, enterprise, and financial software.</p></div>
+    <div class="timeline">
+      <article class="job current reveal"><div class="inner">
+        <time>Oct 2018 – Present</time>
+        <h3>Senior Software Engineer .NET</h3>
+        <p class="co"><a href="https://etoolmarts.com/about" target="_blank" rel="noopener">eToolmarts Pvt. Ltd.</a> · Karachi, Pakistan</p>
+        <ul>
+          <li>Build web APIs for marketplaces including Amazon, eBay, Walmart, and Jet.</li>
+          <li>Implement payment APIs for Authorize.Net, PayPal, Google Pay, BlueSnap, and Braintree.</li>
+          <li>Integrate shipment APIs for FedEx, UPS, and ShipStation.</li>
+          <li>Develop software components into fully functional systems.</li>
+        </ul>
+      </div></article>
+      <article class="job reveal"><div class="inner">
+        <time>May 2017 – Oct 2018</time>
+        <h3>Senior Software Engineer .NET</h3>
+        <p class="co"><a href="https://www.matechco.com/" target="_blank" rel="noopener">MATech Consulting Software Company</a> · Karachi, Pakistan</p>
+        <ul>
+          <li>Worked on Amazon MWS APIs and integrated them into a CMS.</li>
+          <li>Created and optimised database views and stored procedures.</li>
+          <li>Designed wireframes for applications.</li>
+        </ul>
+      </div></article>
+      <article class="job reveal"><div class="inner">
+        <time>Apr 2015 – Apr 2017</time>
+        <h3>Software Developer .NET</h3>
+        <p class="co"><a href="https://www.thks.com.pk/thecompany.html" target="_blank" rel="noopener">THK Solutions Pvt. Ltd.</a> · Karachi, Pakistan</p>
+        <ul>
+          <li>Designed high-performance applications to improve system efficiency.</li>
+          <li>Managed end-to-end development, from requirement analysis to deployment.</li>
+          <li>Worked on the customer information system (CIS) for Engro Fertilizers.</li>
+        </ul>
+      </div></article>
+      <article class="job reveal"><div class="inner">
+        <time>Feb 2013 – Mar 2015</time>
+        <h3>.NET Developer</h3>
+        <p class="co"><a href="https://bv2000.com.pk/" target="_blank" rel="noopener">Business Vision 2000 Pvt. Ltd.</a> · Karachi, Pakistan</p>
+        <ul>
+          <li>Executed the full software development life cycle and installed development tools.</li>
+          <li>Configured applications on IIS servers.</li>
+          <li>Learned and modelled business logic and workflows for client systems.</li>
+        </ul>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Featured projects</h2><p>A selection of production systems I’ve built or contributed to.</p></div>
+    <div class="proj-grid">
+      <article class="proj reveal">
+        <div class="meta">Dec 2019 – Sep 2020</div>
+        <h3>ToolPartsPro e-commerce</h3>
+        <p>An online store where customers order aftermarket tool parts, with checkout through Google Pay, Mastercard, Visa, American Express, and PayPal.</p>
+        <div class="chips"><span class="chip">ASP.NET</span><span class="chip">Payment APIs</span><span class="chip">E-commerce</span></div>
+        <a class="link" href="https://www.toolpartspro.com/" target="_blank" rel="noopener">Visit website ↗</a>
+      </article>
+      <article class="proj reveal">
+        <div class="meta">Jan 2019 – May 2022</div>
+        <h3>CMS for marketplaces</h3>
+        <p>A management system for processing orders and sending shipments across Amazon, eBay, Walmart, Magento, and standalone websites.</p>
+        <div class="chips"><span class="chip">Web API</span><span class="chip">Marketplace APIs</span><span class="chip">Shipping APIs</span></div>
+        <span class="private">Private system</span>
+      </article>
+      <article class="proj reveal">
+        <div class="meta">Oct 2015 – Dec 2016</div>
+        <h3>Engro farmer portal (CIS)</h3>
+        <p>A portal for Engro Fertilizers connecting farmers, dealers, and internal teams, with eleven activities, sales and marketing dashboards, payment integration, and full administrator security and configuration.</p>
+        <div class="chips"><span class="chip">ASP.NET</span><span class="chip">SQL Server</span><span class="chip">Dashboards</span></div>
+        <a class="link" href="https://humsafar.engro.com/" target="_blank" rel="noopener">Visit website ↗</a>
+      </article>
+      <article class="proj reveal">
+        <div class="meta">Oct 2015 – Dec 2016</div>
+        <h3>G.PRIME2 learning platform</h3>
+        <p>An established online learning and information management system built for the Australian General Practice Training Program.</p>
+        <div class="chips"><span class="chip">ASP.NET</span><span class="chip">Learning management</span></div>
+        <a class="link" href="http://www.gprime2.com.au/" target="_blank" rel="noopener">Visit website ↗</a>
+      </article>
+      <article class="proj reveal">
+        <div class="meta">Feb 2015 – Jan 2016</div>
+        <h3>ERP for Lowe &amp; Rauf</h3>
+        <p>An ERP solution for an advertising company: plan creation, workflow-driven processing, general ledger records, and a complete financial module.</p>
+        <div class="chips"><span class="chip">ERP</span><span class="chip">Workflows</span><span class="chip">Finance / GL</span></div>
+        <span class="private">Private system</span>
+      </article>
+      <article class="proj reveal" style="justify-content:center;text-align:center;align-items:center">
+        <h3>More work on Upwork</h3>
+        <p style="flex:none">See client reviews and more of my freelance work on my Upwork profile.</p>
+        <a class="btn upwork" href="https://www.upwork.com/freelancers/~017f4734b102be4c19?mp_source=share" target="_blank" rel="noopener">View Upwork profile</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="edu" id="education">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Education &amp; certifications</h2><p>Formal training in computer science, plus hands-on .NET certification.</p></div>
+    <div class="edu-grid">
+      <div style="display:grid;gap:28px;align-content:start">
+        <div class="card reveal">
+          <h3>Education</h3>
+          <div class="item"><b>MCS, Master of Computer Science</b><span>University of Karachi (UBIT Dept.) · 2015</span></div>
+          <div class="item"><b>BCS, Bachelor of Computer Science</b><span>University of Karachi (UBIT Dept.) · 2012</span></div>
+          <div class="item"><b>HSC, Pre-Engineering</b><span>Govt. Degree College Stadium Road, Karachi · 2008</span></div>
+        </div>
+        <div class="card reveal">
+          <h3>Certifications</h3>
+          <div class="item"><b>.NET Programming</b><span>AMI Apex Institute, June 2011 · registered with Sindh Board of Karachi</span></div>
+          <div class="item"><b>Computer Hardware &amp; Networking, Microsoft Office</b><span>Info Channel Institute, January 2008 · registered with Sindh Board of Karachi</span></div>
+        </div>
+      </div>
+      <div class="card reveal" style="align-self:start">
+        <h3>Languages</h3>
+        <div class="lang"><strong>English</strong><div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><em>Upper intermediate</em></div>
+        <div class="lang"><strong>Urdu</strong><div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><em>Advanced</em></div>
+        <div class="lang"><strong>Hindi</strong><div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><em>Upper intermediate</em></div>
+        <div class="lang"><strong>Arabic</strong><div class="bar"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div><em>Elementary</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <div>
+        <h2>Let’s work together</h2>
+        <p>I’m open to new opportunities and interesting projects, especially APIs, integrations, and enterprise .NET systems. Send me a message or hire me directly on Upwork.</p>
+        <div class="cta" style="margin:28px 0 0;justify-content:flex-start">
+          <a class="btn primary" href="mailto:mumairumer22@gmail.com">Email me</a>
+          <a class="btn upwork" href="https://www.upwork.com/freelancers/~017f4734b102be4c19?mp_source=share" target="_blank" rel="noopener">Hire on Upwork</a>
+        </div>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:mumairumer22@gmail.com">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          mumairumer22@gmail.com
+        </a>
+        <a href="tel:+923422669824">
+          <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          0342-2669824
+        </a>
+        <a href="https://github.com/mumairumer" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5a3 3 0 0 0-.8-2.3c2.8-.3 5.8-1.4 5.8-6.2a4.8 4.8 0 0 0-1.3-3.3 4.5 4.5 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.5 4.5 0 0 0-.1 3.3A4.8 4.8 0 0 0 4 9.7c0 4.8 3 5.9 5.8 6.2a3 3 0 0 0-.8 2.3V21"/></svg>
+          github.com/mumairumer
+        </a>
+        <a href="https://www.upwork.com/freelancers/~017f4734b102be4c19?mp_source=share" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#14a800" stroke="none">Up</text></svg>
+          Upwork profile
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Muhammad Umair. All rights reserved.</span>
+    <span>Senior .NET Software Engineer · Karachi, Pakistan</span>
+  </div>
+</footer>
+
+<a href="#home" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const menu = document.getElementById('menu');
+  const btn = document.getElementById('menuBtn');
+  btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  menu.addEventListener('click', e => {
+    if (e.target.tagName === 'A') { menu.classList.remove('open'); btn.setAttribute('aria-expanded', false); }
+  });
+
+  // Highlight current section in nav
+  const links = [...menu.querySelectorAll('a')];
+  const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + en.target.id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(s => s && io.observe(s));
+
+  // Scroll reveal
+  const rv = new IntersectionObserver((entries, obs) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); obs.unobserve(en.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => rv.observe(el));
+
+  // Back-to-top button
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => toTop.classList.toggle('show', window.scrollY > 600), { passive: true });
+
+  // Rotating role text (static text if motion is reduced)
+  const roles = ['Senior .NET Software Engineer', 'API & Integration Specialist', 'Payment Gateway Developer', 'Enterprise Web Application Developer'];
+  const el = document.getElementById('typed');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let r = 0, c = roles[0].length, del = true;
+    const tick = () => {
+      const word = roles[r];
+      if (del) { c--; if (c <= 0) { del = false; r = (r + 1) % roles.length; } }
+      else { c++; if (c >= roles[r].length) { del = true; el.textContent = roles[r]; return setTimeout(tick, 2200); } }
+      el.textContent = roles[r].slice(0, Math.max(c, 0));
+      setTimeout(tick, del ? 35 : 65);
+    };
+    setTimeout(tick, 2200);
+  }
+</script>
+</body>
+</html>
